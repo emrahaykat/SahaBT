@@ -1,6 +1,6 @@
 Saha Bilgi Teknolojileri
 ------------------------
- -3 scenarios have been automated for gittigidyor.com
+ -3 scenarios have been automated for gittigidiyor.com
 
 Project Environment
 -----------------------
@@ -28,7 +28,7 @@ Example for Register action
 Importing the project into the Eclipse IDE
 --------------------------
   -You should import the project into eclipse as maven project.
-  -You should change the chrome driver path whic is in SetUp() functionunder UserAction.java
+  -You should change the chromedriver path which is in SetUp() function under UserAction.java
    Change the code below as where is your chromedriver.
    System.setProperty("webdriver.chrome.driver", "C:\\Users\\emrah\\workspace\\gittigidiyor\\resources\\chromedriver.exe");
   -To run the project, you need to run the UserAction.java class run as junit.
