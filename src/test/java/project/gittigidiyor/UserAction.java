@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class UserAction {
 	private WebDriver driver;
 	private String baseUrl;
-    SearchPage searcAction;
 	@Before
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\emrah\\workspace\\gittigidiyor\\resources\\chromedriver.exe");
@@ -26,7 +25,7 @@ public class UserAction {
 	public void Login() throws InterruptedException{
 		
 		driver.get(baseUrl);
-		Register.clossPopup(driver).click();
+		Register.closePopup(driver).click();
 		Thread.sleep(2500);
 		Register.clickLoginLink(driver).click();
 		Register.getLoginEmail(driver, "emrahaykat@gmail.com");
@@ -41,7 +40,7 @@ public class UserAction {
 	@Test
 	public void Register() throws InterruptedException{
 		driver.get(baseUrl);
-		Register.clossPopup(driver).click();
+		Register.closePopup(driver).click();
 		Thread.sleep(1000);
 		Register.getSignupLink(driver).click();
 		Register.Username(driver, "Emrah");
@@ -51,6 +50,7 @@ public class UserAction {
 		Thread.sleep(1000);
 		Register.selectNickName(driver).click();
 		Register.Password(driver, "123456ab");
+		Thread.sleep(1000);
 		Register.PasswordAgain(driver, "123456ab");
 		Register.GsmCode(driver, "530");
 		Register.PhoneNumber(driver, "0359882");
@@ -64,11 +64,8 @@ public class UserAction {
 	public void SearchAction() throws InterruptedException{
 		driver.get(baseUrl);
 		Thread.sleep(1000);
-		SearchPage.clossPopup(driver).click();
+		SearchPage.closePopup(driver).click();
 		Thread.sleep(2500);
-		//searcAction.searchProduct("Asus");
-		//searcAction.tabSearchButton();
-		 //second way
 		Thread.sleep(1000);
 		SearchPage.getSearchBox(driver, "Asus");
 		SearchPage.tabSearchButton(driver).click();
@@ -82,12 +79,6 @@ public class UserAction {
 	public void tearDown() throws Exception {
 		driver.quit();
 	}
-    public void Wait()
-	{
-		
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-	}
-
-   
+    
     
 }

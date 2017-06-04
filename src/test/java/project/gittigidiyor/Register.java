@@ -148,7 +148,7 @@ public class Register {
 	
 	
 	//close popup
-	 public static WebElement clossPopup(WebDriver driver){
+	 public static WebElement closePopup(WebDriver driver){
 	    	element=driver.findElement(By.xpath(Paths.StartPopup.getPath()));
 	    	return element;
 	    }
