@@ -14,7 +14,7 @@ public class UserAction {
 	private String baseUrl;
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\emrah\\workspace\\gittigidiyor\\resources\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "\\gittigidiyor\\resources\\chromedriver.exe");
 		driver=new ChromeDriver();
 		baseUrl="http://www.gittigidiyor.com/";
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
